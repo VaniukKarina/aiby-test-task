@@ -11,3 +11,6 @@ This project is a full-screen WebView banner for iPhone SE, 8, 8+, X, and 12.
 - Language switch via `?lang=`
 - Language-based typography adjustments
 - Device-specific layout handling
+
+## 🔗 Live demo
+https://vaniukkarina.github.io/aiby-test-task/
