@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+img {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================= */
+/* BASE CANVAS — iPhone X */
+/* ============================= */
+
+.wrapper {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/bg@3x.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.close {
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/close.svg") no-repeat center;
+  background-size: contain;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 266px;
+  left: 24px;
+  right: 24px;
+  font-size: 42px;
+  line-height: 46px;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+}
+
+.lang-de .title,
+.lang-fr .title,
+.lang-pt .title {
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.lang-es .title,
+.lang-ja .title {
+  font-size: 38px;
+  line-height: 42px;
+}
+
+.features {
+  position: absolute;
+  top: 382px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
+}
+
+.feature {
+  width: 110px;
+  height: 146px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature span {
+  position: absolute;
+  bottom: 12px;
+  left: 8px;
+  right: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.plans {
+  position: absolute;
+  top: 562px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan {
+  position: relative;
+  height: 56px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 18px 56px 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.plan--year {
+  background: linear-gradient(180deg, #1b1b25, #0f0f15);
+}
+
+.plan.active {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+}
+
+.plan-subtitle,
+.plan-price {
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.7;
+}
+
+.lang-de .plan-subtitle,
+.lang-de .plan-price,
+.lang-fr .plan-subtitle,
+.lang-fr .plan-price,
+.lang-pt .plan-subtitle,
+.lang-pt .plan-price {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 24px;
+  width: 119px;
+  height: 20px;
+  border-radius: 14px;
+  background: rgba(20, 20, 30, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff96f4, #632af7, #3b82f6);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.cta {
+  position: absolute;
+  top: 698px;
+  left: 24px;
+  right: 24px;
+  height: 56px;
+  border-radius: 28px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 4px;
+  left: 54px;
+  right: 54px;
+  width: 281px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 100;
+  white-space: nowrap;
+}
+
+.lang-de .footer a,
+.lang-fr .footer a {
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.lang-es .footer a,
+.lang-pt .footer a {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* ============================= */
+/* iPhone 12 / 12 Pro */
+/* ============================= */
+
+.device-12 .wrapper {
+  transform: scale(1.04);
+  transform-origin: top center;
+}
+
+/* ============================= */
+/* SMALL DEVICES: iPhone SE / 8 */
+/* ============================= */
+
+.device-small .close {
+  transform: translateY(-26px);
+  transform-origin: top center;
+}
+
+.device-small .content {
+  transform: translateY(-100px) scale(0.95);
+  transform-origin: top center;
+}
+
+.device-small .footer {
+  transform: translateY(-150px) scale(0.95);
+  transform-origin: top center;
+  bottom: 8px;
+}
+
+.device-small .background {
+  transform-origin: top center;
+  background-position: center -34px;
+}
