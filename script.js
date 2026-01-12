@@ -42,3 +42,16 @@ async function loadLang() {
 })();
 
 loadLang();
+
+(function handlePlans() {
+  const plans = document.querySelectorAll(".plan");
+
+  plans.forEach((plan) => {
+    plan.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      plans.forEach((p) => p.classList.remove("active"));
+      plan.classList.add("active");
+    });
+  });
+})();
