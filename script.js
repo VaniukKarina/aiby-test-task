@@ -1,4 +1,4 @@
-const supportedLangs = ["en", "de", "fr", "es", "it", "pt"];
+const supportedLangs = ["en", "de", "fr", "es", "ja", "pt"];
 
 function getLang() {
   const params = new URLSearchParams(window.location.search);
